@@ -1,0 +1,8 @@
+/*
+ * markup.css - takes care of markup look & feel
+ *
+ */
+
+li {
+    list-style-type: none;
+}
