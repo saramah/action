@@ -11,7 +11,10 @@
     <link rel="stylesheet" href="css/layout.css" type="text/css" />
     <link rel="stylesheet" href="css/markup.css" type="text/css" />
     <!--javascript-->
-    
+    <script type = "text/javascript">
+        function complete(){
+        }
+    </script>
 </head>
 <body>
     <div class="navigation">

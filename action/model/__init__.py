@@ -17,23 +17,25 @@ yesterday = datetime.date.today() + datetime.timedelta(-1)
 
 tasks_table = Table('tasks', metadata,
         Column('id', types.Integer, primary_key=True, autoincrement=True),
-        Column('task', types.Unicode(100)),
+        Column('name', types.Unicode(100)),
+        Column('parent', types.Integer),
         Column('description', types.Unicode(), default=''),
         Column('deadline', types.DateTime(), default=yesterday),
         Column('done', types.Boolean(), default='False')
         )
 
 class Task(object):
-    def __init__(self, task, desc, dl, done):
-        self.task = task
+    def __init__(self, name, parent, desc, dl, done):
+        self.name = name
+        self.parent = parent
         self.description = desc
         self.deadline = dl
         self.done = done
 
     def __str__(self):
-        return self.task
+        return self.name
 
     def __cmp__(self, other):
-        return cmp(self.task, other.task)
+        return cmp(self.name, other.name)
 
 mapper(Task, tasks_table)

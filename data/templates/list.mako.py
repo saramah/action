@@ -1,7 +1,7 @@
 from mako import runtime, filters, cache
 UNDEFINED = runtime.UNDEFINED
 _magic_number = 2
-_modified_time = 1234308034.3680511
+_modified_time = 1235498278.1602621
 _template_filename='/home/sarah/Documents/action/action/templates/list.mako'
 _template_uri='/list.mako'
 _template_cache=cache.Cache(__name__, _modified_time)
@@ -30,7 +30,7 @@ def render_body(context,**pageargs):
         # SOURCE LINE 10
         for t in c.tasks:
             # SOURCE LINE 11
-            context.write(u'        <li>\n            <input type="checkbox" name="')
+            context.write(u'        <li>\n            <input type="checkbox" onchange="complete()" name="')
             # SOURCE LINE 12
             context.write(unicode(t.id))
             context.write(u'" />')

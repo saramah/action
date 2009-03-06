@@ -39,7 +39,7 @@ class TaskController(BaseController):
 
     def add_new(self):
         Session.begin()
-        t = Task(request.params['new_task'], u'', yesterday, False)
+        t = Task(request.params['new_task'], 0, u'', yesterday, False)
         Session.add(t)
         Session.commit()
         #TODO: ajaxify this

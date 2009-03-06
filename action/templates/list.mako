@@ -9,7 +9,7 @@
     <ul id="todo">
     % for t in c.tasks:
         <li>
-            <input type="checkbox" name="${t.id}" />${t}
+            <input type="checkbox" onchange="complete()" name="${t.id}" />${t}
         </li>
     % endfor
     </ul>
