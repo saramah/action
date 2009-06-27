@@ -25,7 +25,7 @@
 <a href="#">see completed tasks</a>
 
 <ul id="done">
-% for d in c.done_tasks:
+% for d in c.done_tasks[:10]:
     <li>${d}</li>
 % endfor
 </ul>

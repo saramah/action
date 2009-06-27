@@ -24,6 +24,11 @@ tasks_table = Table('tasks', metadata,
         Column('done', types.Boolean(), default='False')
         )
 
+tdlists_table = Table('tdlists', metadata,
+        Column('id', types.Integer, primary_key=True, autoincrement=True),
+        Column('name', types.Unicode(100)),
+        Column('tdlist', 
+
 class Task(object):
     def __init__(self, name, parent, desc, dl, done):
         self.name = name
@@ -38,4 +43,9 @@ class Task(object):
     def __cmp__(self, other):
         return cmp(self.name, other.name)
 
+class ToDoList(object):
+    def __init__(self, name, task_list):
+        self.name = name
+        self.task_list = task_list
+ 
 mapper(Task, tasks_table)
